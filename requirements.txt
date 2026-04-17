@@ -1,0 +1,18 @@
+# Web Framework & Server
+fastapi
+uvicorn[standard]
+pydantic
+
+# Machine Learning & Data Processing
+scikit-learn
+pandas
+numpy
+joblib
+
+# NLP — Entity Masking
+spacy
+
+
+
+# Environment
+python-dotenv
