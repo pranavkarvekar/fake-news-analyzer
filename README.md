@@ -27,8 +27,10 @@ cd fake-news-analyzer
 ```
 
 ### 2. Backend Setup
-Set up a virtual environment in the project directory:
 
+You can set up the backend using standard `pip` or using `uv` (an extremely fast Python package installer and resolver).
+
+#### Option A: Using standard `pip`
 ```bash
 # Create and activate virtual environment
 python -m venv .venv
@@ -36,6 +38,20 @@ source .venv/bin/activate    # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Download required spaCy model
+python -m spacy download en_core_web_sm
+```
+
+#### Option B: Using `uv` (Recommended for speed)
+Ensure you have `uv` installed (e.g., `pip install uv`).
+```bash
+# Create virtual environment
+uv venv
+source .venv/bin/activate    # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+uv pip install -r requirements.txt
 
 # Download required spaCy model
 python -m spacy download en_core_web_sm
